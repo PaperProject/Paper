@@ -3,7 +3,7 @@
     // die;
 
     try {
-        $dbh = new PDO('mysql:host=tritriper.noip.me;port=22;dbname=Paper', "root", "rennes");
+        $dbh = new PDO('mysql:host=localhost;port=22;dbname=Paper', "root", "rennes");
     } catch (PDOException $e) {
         print "Erreur !: " . $e->getMessage() . "<br/>";
         die();
