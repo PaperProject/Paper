@@ -3,7 +3,7 @@
     // die;
 
     try {
-        $servername = "tritiper.noip.me";
+        $servername = "192.168.0.13";
         $dbh = new PDO('mysql:host=' . $servername . ';dbname=Paper', "hardrox", "");
     } catch (PDOException $e) {
         print "Erreur !: " . $e->getMessage() . "<br/>";
