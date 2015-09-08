@@ -10,7 +10,9 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', ['uses' => 'WelcomeController@index', 'as' => 'home']);
+Route::get('users', 'UsersController@getInfos');
+Route::post('users', 'UsersController@postInfos');
+Route::get('article/{n}', 'ArticleController@show')->where('n', '[0-9]+');
+Request::input('nom');
+Route::controller('users', 'UsersController');
