@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'debug' => true,
+    'debug' => env('APP_DEBUG'),
 
     /*
     |--------------------------------------------------------------------------
@@ -65,7 +65,7 @@ return [
     |
     */
 
-    'fallback_locale' => 'fr',
+    'fallback_locale' => 'en',
 
     /*
     |--------------------------------------------------------------------------
@@ -78,7 +78,7 @@ return [
     |
     */
 
-    'key' => env('APP_KEY', 'EZQweC8zc4sM8uAoMDnSyyanmSWMocPA'),
+    'key' => env('APP_KEY', 'ScdqiJKMaWSMGTSAftPrOMikoeEsGH2J'),
 
     'cipher' => 'AES-256-CBC',
 
@@ -193,7 +193,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
         'Form'      => Illuminate\Html\FormFacade::class,
-        'Html'      => Illuminate\Html\HtmlFacade::class,
+        'HTML'      => Illuminate\Html\HtmlFacade::class,
 
     ],
 
