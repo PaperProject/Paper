@@ -4,7 +4,7 @@
 <h3 class="heading">S'enregistrer</h3>
 <hr/>
 <div class="text-center">
-  <span class="on-hr">Ou</span>
+  <span class="on-hr">ou</span>
 </div>
 @foreach($errors->all() as $error)
 <p class="alert alert-danger">{!!$error!!}</p>
@@ -37,13 +37,13 @@
 <div class="form-group">
   <div class="checkbox">
     <label for="news">
-      <input type="checkbox" name="news" id="news" value="true">
+      {!! Form::checkbox('news', null, true) !!}
       Recevoir les nouveautés et les informations concernant les services de "Project S" par e-mail. (En savoir plus)
     </label>
   </div>
 </div>
 <div class="text-center">
-  {!!Form::submit('C\'est partit !',['class'=>'btn btn-default btn-form'])!!}
+  {!!Form::submit('C\'est parti !',['class'=>'btn btn-default btn-form'])!!}
 </div>
 {!!Form::close()!!}
 <hr/>
