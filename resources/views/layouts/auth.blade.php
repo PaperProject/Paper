@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Main Layout | Laravel 5</title>
+  <title>Authentication | Project S</title>
 
   <!-- Vendor -->
   {!! HTML::style('css/app.css') !!}

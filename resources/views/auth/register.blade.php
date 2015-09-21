@@ -19,6 +19,32 @@
   </div>
 </div>
 <div class="form-group">
+  <div class="row">
+    <div class="form-group col-sm-3">
+      <div class="select-box">
+        {!! Form::selectRange('birth_day', 1, 31, 1, ['class'=>'input-nostyle']) !!}
+        <span class="select-separator"></span>
+      </div>
+    </div>
+    <div class="form-group col-sm-5 form-select-center">
+      <div class="select-box">
+        <select class="input-nostyle" name="birth_month">
+          @foreach ($months as $key => $month)
+          <option value="{{ $key }}">{{ $month }}</option>
+          @endforeach
+        </select>
+        <span class="select-separator"></span>
+      </div>
+    </div>
+    <div class="form-group col-sm-4">
+      <div class="select-box">
+        {!! Form::selectYear('birth_year', date("Y")-10, date("Y")-100, 1996, ['class'=>'input-nostyle']) !!}
+        <span class="select-separator"></span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="form-group">
   {!! Form::text('username',Input::old('username'),['class'=>'form-control inputbox', 'placeholder'=>'Nom d\'utilisateur']) !!}
   <span class="help-block">Le nom d'utilisateur n'est pas définitif.</span>
 </div>
