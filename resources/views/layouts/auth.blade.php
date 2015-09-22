@@ -7,6 +7,7 @@
 
   <!-- Vendor -->
   {!! HTML::style('css/app.css') !!}
+  {!! HTML::style('css/bootstrap-social.css') !!}
   {!! HTML::script('js/vendor.js') !!}
 
   <!-- Custom -->

@@ -2,7 +2,23 @@
 
 @section('content')
 <h3 class="heading">S'enregistrer</h3>
-<hr/>
+<div class="row marg-bot marg-top">
+  <div class="col-sm-12">
+    <a class="btn btn-block btn-social btn-google btn-form-height">
+      <i class="fa fa-google"></i>
+      Sign in with Google+
+    </a>
+  </div>
+</div>
+<div class="row marg-bot">
+  <div class="col-sm-12">
+    <a class="btn btn-block btn-social btn-facebook btn-form-height">
+      <i class="fa fa-facebook"></i>
+      Sign in with Facebook
+    </a>
+  </div>
+</div>
+<hr class="marg-top"/>
 <div class="text-center">
   <span class="on-hr">ou</span>
 </div>
@@ -19,6 +35,7 @@
   </div>
 </div>
 <div class="form-group">
+  {!! Form::label('birth_date', 'Date de naissance') !!}
   <div class="row">
     <div class="form-group col-sm-3">
       <div class="select-box">

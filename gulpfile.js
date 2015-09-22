@@ -26,7 +26,7 @@ elixir(function(mix) {
             'bootstrap/dist/js/bootstrap.min.js',
             'bootstrap-select/dist/js/bootstrap-select.min.js'
           ], 'public/js/vendor.js', bowerDir)
-        //.copy('resources/assets/js/app.js', 'public/js/app.js')
+        .copy('resources/assets/vendor/bootstrap-social/bootstrap-social.css', 'public/css/bootstrap-social.css')
         .copy(bowerDir + 'font-awesome/fonts', 'public/fonts');
 
 });

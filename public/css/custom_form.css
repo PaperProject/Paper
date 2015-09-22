@@ -153,8 +153,14 @@ input.inputbox:-moz-placeholder { color:#737373; }
   }
 }
 
+@media only screen and (max-width : 768px) {
+  .select-box {
+    margin-bottom: 10px;
+  }
+}
+
 .on-hr {
-  color: #0073FF;
+  color: #5C5C5C;
   background-color: #FCFCFC;
   position: relative;
   bottom: 31px;
@@ -206,4 +212,21 @@ input.inputbox:-moz-placeholder { color:#737373; }
 
 .select-box:hover .select-separator {
   border-left: 1px solid #AEAEAE !important;
+}
+
+.btn-form-height {
+  height: 40px !important;
+  line-height: 26px !important;
+}
+
+.btn-form-height i{
+  top: 3px !important;
+}
+
+.marg-bot {
+  margin-bottom: 10px;
+}
+
+.marg-top {
+  margin-top: 35px;
 }
