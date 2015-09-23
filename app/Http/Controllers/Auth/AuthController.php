@@ -6,6 +6,8 @@ use Illuminate\Contracts\Auth\Guard;
 
 use App\Http\Requests\Auth\LoginRequest;
 use App\Http\Requests\Auth\RegisterRequest;
+use App\AuthenticateUser;
+use Illuminate\Http\Request;
 
 class AuthController extends Controller {
 
@@ -34,6 +36,25 @@ class AuthController extends Controller {
 
         $this->middleware('guest', ['except' => ['getLogout']]);
     }
+
+    /**
+     * Connect user with socialite.
+     *
+     * @return App\AuthenticateUser
+     */
+     public function log(AuthenticateUser $authenticateUser, Request $request, $provider = null) {
+        return $authenticateUser->execute($request->all(), $this, $provider);
+     }
+
+     /**
+      * Redirect a user to homepage.
+      *
+      * @return Response
+      */
+     public function userHasLoggedIn($user) {
+        \Session::flash('success', 'Welcome, ' . $user->first_name . " " . $user->last_name);
+        return redirect('/');
+     }
 
     /**
      * Show the application registration form.

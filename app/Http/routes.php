@@ -11,6 +11,7 @@
 |
 */
 Route::get('/', ['uses' => 'Main\HomeController@index', 'as' => 'home']);
+Route::get('auth/log/{provider?}', 'Auth\AuthController@log');
 Route::controller('auth', 'Auth\AuthController');
 //Route::get('users', 'UsersController@getInfos');
 //Route::post('users', 'UsersController@postInfos');

@@ -41,6 +41,13 @@
     </div>
   </nav>
   <div class="container">
+    @if(Session::has('success'))
+        <div class="alert alert-success">
+            <p>{{ Session::get('success') }}</p>
+        </div>
+    @endif
+  </div>
+  <div class="container">
     <header id="header">
       <div class="jumbotron">
         <h1>Theme example</h1>

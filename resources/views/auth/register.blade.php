@@ -12,7 +12,7 @@
 </div>
 <div class="row marg-bot">
   <div class="col-sm-12">
-    <a class="btn btn-block btn-social btn-facebook btn-form-height">
+    <a class="btn btn-block btn-social btn-facebook btn-form-height" href="{{ url('auth/log/facebook') }}">
       <i class="fa fa-facebook"></i>
       Sign in with Facebook
     </a>

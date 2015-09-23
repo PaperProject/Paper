@@ -13,7 +13,7 @@ class AlterUsersTableAddUsername extends Migration
   public function up()
   {
     Schema::table('users', function($table){
-      $table->string('username', 50)->after('id');
+      $table->string('username', 50)->nullable()->after('id');
     });
   }
 
